@@ -7,7 +7,30 @@ class Results extends StatelessWidget{
       appBar: Appbar(
       title:Text('BMI CALCULATOR'),
       ),
-  body:Text('Hello'),
+  body:Column(
+      mainAxisAlignment:MainAxisAlignment.spaceEvenly,
+  children:<widget>[
+    Expanded(
+        child:Container(
+      child:Text('Your Result',style:ktitletextStyle)
+      )
+        )
+  Expanded(
+      flex:5,
+      child:ReusableCard(
+      colour:KActiveCardcolour,
+      cardchild:Column(
+      mainAxisAlignment: mainAxisalignment.spacevenly,
+      crossAxisAlignment:CrossAxisAlignment.center,
+  chlidren:<widget>[
+    Text('Overweight',Style:)
+  ]
+      )
+      )
+      )
+  ]
+
+      ),
 
   )
 }
