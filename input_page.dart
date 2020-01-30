@@ -1,3 +1,5 @@
+import 'dart:js';
+import 'results_page.dart'
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'icon_content.dart'
@@ -78,11 +80,18 @@ Color femalecolor=inactivecardcolor;
              ],
               )),
         ]
-          container(
+
+GestureDetector(
+
+onTap()
+{
+  Navigator.push(context,MaterialPageRoute(builder:(context) =>ResultsPage()))
+}child:container(
+          child:Text('CALCULATE')
           color:colors.red,
         margin:edgeInsets.only(top:10.0),
       width:double.infinity,
-      height:80.0,
+      height:Kbottomcontainerheight,
 
 
 
