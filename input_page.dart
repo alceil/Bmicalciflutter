@@ -59,7 +59,7 @@ void updatecolour(Gender sg)
              child:GestureDetector(
                 onTap():{
                   setState(()
-                  Updatecolour(1))
+                  Updatecolour(Gender.male))
     },
                  child:ReusableCard(
                    colour: maleCardColour,
@@ -71,7 +71,7 @@ void updatecolour(Gender sg)
     child:GestureDetector(
     onTap():{
 setState(()
-Updatecolour(1))
+Updatecolour(Gender.female))
 },
       child:ReusableCard(
         colour: femaleCardColour,
