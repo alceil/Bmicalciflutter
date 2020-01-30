@@ -19,8 +19,34 @@ class _InputPageState extends State<InputPage> {
         title: Text('BMI CALCULATOR'),
       ),
       body: Column(
-        children:<widget>[
-          expanded(child:null),
+        children: <widget>[
+          Expanded(
+              child:Row(
+             children: <Widget>[
+               Expanded(
+                 child:ReusableCard(
+                   colour: activeCardColour,
+                 ),
+               )
+    Expanded(
+      child:ReusableCard(
+        colour: activeCardColour,
+        cardchild:column(
+          children:<Widget>[
+            Icon(
+    FontAwesomeIcons.mars,
+        size:80.0,
+    )
+    SizedBox(
+        heiight:15.0,
+    )
+    Text('Male',Style:Textstyle(fontsize:80,colour:colours.red))
+        ]
+          }
+        )
+      ),
+             ],
+              )),
           expanded(child:null),
           expanded(child:null),
         ]
