@@ -127,6 +127,16 @@ onchanged(double newValue){
 ],
 ),
 )
+Expanded(
+child:Reusablecard{
+  colour:kactiveCardColour,
+  cardChild:Column(
+mainaxisAlignment:mainaxisAlignment.center,
+children:<widget>[
+
+]
+)
+}
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
@@ -135,8 +145,8 @@ onchanged(double newValue){
   }
 }
 class RoundIconButton extends StatelessWidget {
-  RoundIconButton({this.icon});
-
+  RoundIconButton({@required this.icon,this.onpressed});
+  final Function onPressed;
   final IconData icon;
   @override
   Widget build(BuildContext context) {
