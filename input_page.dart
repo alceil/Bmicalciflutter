@@ -32,11 +32,6 @@ Color femalecolor=inactivecardcolor;
         children: <widget>[
              children: <Widget>[
                Expanded(
-             child:GestureDetector(
-                onTap():{
-                  setState(()
-                  sg=Gender.male
-    },
                  child:ReusableCard(
                    colour: sg==gender.male?activeCardColour:inactivecardcolour
         cardchild:IconContent(icon:FontAwesomeIcons.mars,label:'MALE'),
@@ -44,12 +39,12 @@ Color femalecolor=inactivecardcolor;
     )
                )
     Expanded(
-    child:GestureDetector(
-    onTap():{
-setState(()
-sg = Gender.female
-},
       child:ReusableCard(
+    onPress(){
+
+    setState(()
+    sg = Gender.male
+    )}
         colour: colour: sg==gender.female?activeCardColour:inactivecardcolour,
         cardchild:IconContent(icon:FontAwesomeIcons.mars,label:'MALE'),
           }
