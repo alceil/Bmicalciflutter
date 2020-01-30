@@ -6,15 +6,22 @@ import 'input_page.dart'
 const bottomcontainerheight=80.0;
 const activeCardColour=Color();
 const inactiveCardColour=Color();
+enum Gender {
+  male,
+  female,
+
+}
 class InputPage extends StatefulWidget {
-  const malecolor=inactivecardcolour;
-  const femalecolor=inactivecardcolor;
   @override
   _InputPageState createState() => _InputPageState();
 }
-void updatecolour(int gender)
+
+class _InputPageState extends State<InputPage> {
+Color malecolor=inactivecardcolour;
+Color femalecolor=inactivecardcolor;
+void updatecolour(Gender sg)
 {
-  if(gender==1) {
+  if(sg==gender.male) {
     if (malecolor == inactivecardcolour) {
       malecolor = activecardcolour;
       femalecolor = inactivecardcolour;
@@ -23,22 +30,21 @@ void updatecolour(int gender)
       malecolor = inactivecardcolour;
       femalecolor = activecardcolour;
     }
-    if (gender = 2)
-  {
-    if (femalecolor == inactivecardcolour) {
-      femalecolor = activecardcolour;
-      malecolor = inactivecardcolour;
-    }
-    else {
-      femalecolor = inactivecardcolour;
-      malecolor = activecardcolour;
-    }
+    if (sg==gender.female)
+    {
+      if (femalecolor == inactivecardcolour) {
+        femalecolor = activecardcolour;
+        malecolor = inactivecardcolour;
+      }
+      else {
+        femalecolor = inactivecardcolour;
+        malecolor = activecardcolour;
+      }
 
+    }
   }
-    }
 
-class _InputPageState extends State<InputPage> {
-  @override
+    @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -56,7 +62,7 @@ class _InputPageState extends State<InputPage> {
                   Updatecolour(1))
     },
                  child:ReusableCard(
-                   colour: activeCardColour,
+                   colour: maleCardColour,
         cardchild:IconContent(icon:FontAwesomeIcons.mars,label:'MALE'),
                  ),
     )
@@ -68,7 +74,7 @@ setState(()
 Updatecolour(1))
 },
       child:ReusableCard(
-        colour: activeCardColour,
+        colour: femaleCardColour,
         cardchild:IconContent(icon:FontAwesomeIcons.mars,label:'MALE'),
           }
         )
