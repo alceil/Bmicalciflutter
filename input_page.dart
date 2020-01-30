@@ -26,12 +26,13 @@ class _InputPageState extends State<InputPage> {
                Expanded(
                  child:ReusableCard(
                    colour: activeCardColour,
+        cardchild:IconContent(icon:FontAwesomeIcons.mars,label:'MALE'),
                  ),
                )
     Expanded(
       child:ReusableCard(
         colour: activeCardColour,
-        cardchild:IconContent(),
+        cardchild:IconContent(icon:FontAwesomeIcons.mars,label:'MALE'),
           }
         )
       ),
@@ -56,44 +57,3 @@ class _InputPageState extends State<InputPage> {
     );
   }
 }
-class ReusableCard extends StatelessWidget{
-  ReusableCard({@required this.colour,this.cardChild});
-  final Color colour;
-  final Widget cardChild;
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child:cardChild ,
-      margin:EdgeInsets.all(15.0),
-      decoration:BoxDecoration(
-        color:colour,
-        borderRadius: BorderRadius.circular(10.0),
-      )
-    );
-  }
-}
-class IconContent extends StatelessWidget {
-  IconContent({this.icon,this.label});
-  final Icondata icon;
-  final String label;
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-        children:<Widget>[
-          Icon(
-            FontAwesomeIcons.mars,
-            size:80.0,
-          )
-          SizedBox(
-            heiight:15.0,
-          )
-          Text('Male',Style:Textstyle(fontsize:80,colour:colours.red))
-        ]
-
-        )
-      ]
-    )
-  }
-}
-
