@@ -10,6 +10,13 @@ const kbottomContainerHeight = 80.0;
  const kresulttextstyle = TextStyle(
   color:colors.green,
   fontsize:22.0,
-  fontWeight: FontWeight.bold,
-
+  fontWeight: FontWeight.bold,)
+ const kresulttextstyle = TextStyle(
+  color:colors.green,
+  fontsize:22.0,
+  fontWeight: FontWeight.bold,)
  );
+ const kBMItextstyle = TextStyle(
+  color:colors.green,
+  fontsize:22.0,
+  fontWeight: FontWeight.bold,)
