@@ -17,31 +17,9 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
+//  Gender sg;
 Color malecolor=inactivecardcolour;
 Color femalecolor=inactivecardcolor;
-void updatecolour(Gender sg)
-{
-  if(sg==gender.male) {
-    if (malecolor == inactivecardcolour) {
-      malecolor = activecardcolour;
-      femalecolor = inactivecardcolour;
-    }
-    else {
-      malecolor = inactivecardcolour;
-      femalecolor = activecardcolour;
-    }
-    if (sg==gender.female)
-    {
-      if (femalecolor == inactivecardcolour) {
-        femalecolor = activecardcolour;
-        malecolor = inactivecardcolour;
-      }
-      else {
-        femalecolor = inactivecardcolour;
-        malecolor = activecardcolour;
-      }
-
-    }
   }
 
     @override
@@ -52,17 +30,15 @@ void updatecolour(Gender sg)
       ),
       body: Column(
         children: <widget>[
-          Expanded(
-              child:Row(
              children: <Widget>[
                Expanded(
              child:GestureDetector(
                 onTap():{
                   setState(()
-                  Updatecolour(Gender.male))
+                  sg=Gender.male
     },
                  child:ReusableCard(
-                   colour: maleCardColour,
+                   colour: sg==gender.male?activeCardColour:inactivecardcolour
         cardchild:IconContent(icon:FontAwesomeIcons.mars,label:'MALE'),
                  ),
     )
@@ -71,10 +47,10 @@ void updatecolour(Gender sg)
     child:GestureDetector(
     onTap():{
 setState(()
-Updatecolour(Gender.female))
+sg = Gender.female
 },
       child:ReusableCard(
-        colour: femaleCardColour,
+        colour: colour: sg==gender.female?activeCardColour:inactivecardcolour,
         cardchild:IconContent(icon:FontAwesomeIcons.mars,label:'MALE'),
           }
         )
