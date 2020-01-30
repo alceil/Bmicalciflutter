@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart'
 class IconContent extends StatelessWidget {
   IconContent({this.icon,this.label});
+  const labelTextStyle=Textstyle(fontsize:80,colour:colours.red);
   final Icondata icon;
   final String label;
   @override
@@ -16,7 +17,7 @@ class IconContent extends StatelessWidget {
           SizedBox(
             heiight:15.0,
           )
-          Text('Male',Style:Textstyle(fontsize:80,colour:colours.red))
+          Text('Male',Style:labelTextStyle)
         ]
 
     )
