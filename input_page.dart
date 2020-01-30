@@ -51,7 +51,7 @@ class _InputPageState extends State<InputPage> {
              child:GestureDetector(
                 onTap():{
                   setState(()
-                  Updatecolour(2))
+                  Updatecolour(1))
     },
                  child:ReusableCard(
                    colour: activeCardColour,
@@ -60,6 +60,11 @@ class _InputPageState extends State<InputPage> {
     )
                )
     Expanded(
+    child:GestureDetector(
+    onTap():{
+setState(()
+Updatecolour(1))
+},
       child:ReusableCard(
         colour: activeCardColour,
         cardchild:IconContent(icon:FontAwesomeIcons.mars,label:'MALE'),
