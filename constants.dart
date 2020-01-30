@@ -7,4 +7,9 @@ const kbottomContainerHeight = 80.0;
  const klargebuttontextStyle;
  const ktitletextStyle=TextStyle(
   fontSize:50.0,fontWeight:fontWeight.bold)
+ const kresulttextstyle = TextStyle(
+  color:colors.green,
+  fontsize:22.0,
+  fontWeight: FontWeight.bold,
+
  );
