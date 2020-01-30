@@ -4,6 +4,8 @@ import 'reusable_card.dart'
 import 'material.dart'
 import 'input_page.dart'
 const bottomcontainerheight=80.0;
+const activeCardColour=Color();
+const inactiveCardColour=Color();
 class InputPage extends StatefulWidget {
   const malecolor=inactivecardcolour;
   const femalecolor=inactivecardcolor;
