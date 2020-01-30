@@ -87,7 +87,7 @@ onTap()
 {
   Navigator.push(context,MaterialPageRoute(builder:(context) =>ResultsPage()))
 }child:container(
-          child:Text('CALCULATE')
+          child:Text('CALCULATE',style: klargebuttontextstyle,)
           color:colors.red,
         margin:edgeInsets.only(top:10.0),
       width:double.infinity,
