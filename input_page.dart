@@ -18,6 +18,7 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
  Gender sg;
  int height=180;
+ int weight=60;
 Color malecolor=inactivecardcolour;
 Color femalecolor=inactivecardcolor;
   }
@@ -41,6 +42,28 @@ Color femalecolor=inactivecardcolor;
                )
     Expanded(
       child:ReusableCard(
+    colour:Kactivecolourcard
+      cardChild:column(
+      Mainaxisalignment:mainaxisalignment.center,
+      children:<widget>[
+        Text('Weight',style:klabeltextstyle)
+        Text(Weight.toString(),style:klabeltextstyle)
+      ]
+      Row(
+      children:<widget>[
+
+      FloatingActionButton(
+      backgroundcolor"color(),
+      child:Icon(Icons.add),
+      )
+      )
+      sizedbox(
+      width:10.0,
+      )
+      FloatingActionButton(
+      backgroundcolor"color(),
+      child:Icon(Icons.add),
+      )
     onPress(){
 
     setState(()
@@ -80,10 +103,26 @@ height.tostring(),style:knumbertextstyle
 Text('cm',style:knumbertextstyle)
 ],
 )
-Slider(
+slidertheme(
+data:sliderthemedata.of(context).copywith(
+activetrackcolor:Colors.white,
+thumbcolor:Color(),
+overlaycolor:Color(),
+thumbshape:
+RoundSliderthumbshape(enabledThumbRadius:15.0),
+Overlayshape:RoundSliderOverlayshape
+
+)
+)
+child:Slider(
 value:height.toDouble(),
 min:120.0,
 max:220.0,
+activecolor:color(),
+inactivecolor:color(),
+onchanged(double newValue){
+  height = newvalue.round();
+}
 )
 ],
 ),
