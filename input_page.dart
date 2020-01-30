@@ -130,6 +130,32 @@ onchanged(double newValue){
 )
 Expanded(
 child:Reusablecard{
+colour:kactiveCardColour,
+cardChild:Column(
+mainaxisAlignment:mainaxisAlignment.center,
+children:<widget>[
+Text(
+'AGE',
+style:klabelTextStyle,
+)
+Text(
+age.tostring(),
+style:klabelTextStyle,
+)
+Row(
+mainAxisAlignment:MainAxisAlignment.center,
+children:<widget>[
+RoundIconButton( icon:FontAwesomeIcons.minus,onPressed:(){setState((){
+age--;
+})
+SizedBox(
+width:10.0,
+)
+RoundIconButton(icon:FontAwesomeicon.plus,Onpressed:(){
+setstate(() age++;)
+})
+Expanded(
+child:Reusablecard{
   colour:kactiveCardColour,
   cardChild:Column(
 mainaxisAlignment:mainaxisAlignment.center,
