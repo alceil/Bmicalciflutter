@@ -62,6 +62,15 @@ Color femalecolor=inactivecardcolor;
 
 
       )
+Expanded(
+child:ReusableCard(
+colour:activeCardColour,
+cardChild:Column(
+children:<Widget>[
+  Text('Height')
+],
+),
+)
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),

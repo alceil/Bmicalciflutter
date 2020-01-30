@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart'
 class IconContent extends StatelessWidget {
   IconContent({this.icon,this.label});
-  const labelTextStyle=Textstyle(fontsize:80,colour:colours.red);
+
   final Icondata icon;
   final String label;
   @override
