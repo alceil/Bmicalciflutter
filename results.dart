@@ -23,7 +23,8 @@ class Results extends StatelessWidget{
       mainAxisAlignment: mainAxisalignment.spacevenly,
       crossAxisAlignment:CrossAxisAlignment.center,
   chlidren:<widget>[
-    Text('Overweight',Style:)
+    Text('Overweight',Style:kresulttextstyle)
+  Text(18,Style:kBMItextstyle)
   ]
       )
       )
