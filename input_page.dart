@@ -135,10 +135,23 @@ onchanged(double newValue){
   }
 }
 class RoundIconButton extends StatelessWidget {
+  RoundIconButton({this.icon});
+
+  final IconData icon;
   @override
   Widget build(BuildContext context) {
     return RawMaterialButton{
+      onpressed() {
+
+
+      }
+      elevation:6.0,
+      constraints:boxconstraints.tightFor(
+        width:56.0,
+        height:56.0,
+      )
   shape:circleborder()
+  fillercolour:color(),
 
     };
   }
