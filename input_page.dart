@@ -19,6 +19,7 @@ class _InputPageState extends State<InputPage> {
  Gender sg;
  int height=180;
  int weight=60;
+ int age=12;
 Color malecolor=inactivecardcolour;
 Color femalecolor=inactivecardcolor;
   }
@@ -133,7 +134,29 @@ child:Reusablecard{
   cardChild:Column(
 mainaxisAlignment:mainaxisAlignment.center,
 children:<widget>[
-
+Text(
+'AGE',
+style:klabelTextStyle,
+)
+Text(
+age.tostring(),
+style:klabelTextStyle,
+)
+Row(
+mainAxisAlignment:MainAxisAlignment.center,
+children:<widget>[
+  RoundIconButton( icon:FontAwesomeIcons.minus,onPressed:(){setState((){
+    age--;
+})
+SizedBox(
+width:10.0,
+)
+RoundIconButton(icon:FontAwesomeicon.plus,Onpressed:(){
+  setstate(() age++;)
+})
+  })
+]
+)
 ]
 )
 }
