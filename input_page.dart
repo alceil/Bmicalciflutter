@@ -3,9 +3,7 @@ import 'icon_content.dart'
 import 'reusable_card.dart'
 import 'material.dart'
 import 'input_page.dart'
-const bottomcontainerheight=80.0;
-const activeCardColour=Color();
-const inactiveCardColour=Color();
+import 'constants.dart'
 enum Gender {
   male,
   female,
@@ -29,6 +27,7 @@ Color femalecolor=inactivecardcolor;
         title: Text('BMI CALCULATOR'),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <widget>[
              children: <Widget>[
                Expanded(
@@ -45,7 +44,7 @@ Color femalecolor=inactivecardcolor;
     setState(()
     sg = Gender.male
     )}
-        colour: colour: sg==gender.female?activeCardColour:inactivecardcolour,
+        colour: colour: sg==gender.female?kactiveCardColour:inactivecardcolour,
         cardchild:IconContent(icon:FontAwesomeIcons.mars,label:'MALE'),
           }
         )
@@ -64,7 +63,7 @@ Color femalecolor=inactivecardcolor;
       )
 Expanded(
 child:ReusableCard(
-colour:activeCardColour,
+colour:kactiveCardColour,
 cardChild:Column(
 children:<Widget>[
   Text('Height')
