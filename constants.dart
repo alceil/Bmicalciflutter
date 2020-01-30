@@ -20,3 +20,7 @@ const kbottomContainerHeight = 80.0;
   color:colors.green,
   fontsize:22.0,
   fontWeight: FontWeight.bold,)
+     const kbodytextstyle = TextStyle(
+      color:colors.green,
+      fontsize:22.0,
+      fontWeight: FontWeight.bold,)

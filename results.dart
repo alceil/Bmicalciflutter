@@ -25,6 +25,8 @@ class Results extends StatelessWidget{
   chlidren:<widget>[
     Text('Overweight',Style:kresulttextstyle)
   Text(18,Style:kBMItextstyle)
+  Text('Your bmi result is quite low.eat more kid',Style:kbodytextstyle)
+
   ]
       )
       )
